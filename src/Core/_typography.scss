@@ -1,0 +1,42 @@
+@function define-typography(
+  $font-size,
+  $font-weight,
+  $letter-spacing: 0
+) {
+  @return (
+      font-size: $font-size,
+      line-height: $font-size * 1.5,
+      font-weight: $font-weight,
+      letter-spacing: $letter-spacing
+  )
+}
+
+$display: (
+    large: define-typography(60, 400),
+    medium: define-typography(48, 400),
+    small: define-typography(36, 400)
+);
+
+$headline: (
+    1: define-typography(32px, 700),
+    2: define-typography(28, 700),
+    3: define-typography(24, 700)
+);
+
+$title: (
+    large: define-typography(22, 700),
+    medium: define-typography(16, 700),
+    small: define-typography(14, 700)
+);
+
+$label: (
+    large: define-typography(14, 500),
+    medium: define-typography(12, 500),
+    small: define-typography(11, 500)
+);
+
+$body: (
+    large: define-typography(16, 400),
+    medium: define-typography(14, 400),
+    small: define-typography(12, 400)
+);
